@@ -5,7 +5,7 @@
           <div class="row">
               
               <div class="col-md-4">
-                  <div class="card product-item">
+                  <div class="card product-item ">
                     <!-- <img src="../assets/laptop1.jpg" class="card-img-top" alt="..."> -->
                         
                     </div>
