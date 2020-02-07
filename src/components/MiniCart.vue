@@ -55,15 +55,6 @@ export default {
     }
   },
   methods:{
-    // emptyBody(){
-    //   var trupi = $("#items-list");
-    //   if(trupi.length === 0){
-    //       return false;
-    //   }
-    //   else{
-    //     return true;
-    //   }
-    // },
     checkout(){
       $("#miniCart").modal('hide');
       this.$router.push('/checkout');

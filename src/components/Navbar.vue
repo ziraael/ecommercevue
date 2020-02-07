@@ -22,7 +22,7 @@
             <!-- <button class="btn btn-outline-info my-2 my-sm-0 mt-3" type="submit">Kërko</button> -->
             <a id="the-login" class="btn btn-outline-success my-2 my-sm-0 mt-3 ml-2" data-toggle="modal" data-target="#login">Login</a>
             <a id="mycart" class="btn btn-outline-warning my-2 my-sm-0 mt-3 ml-2" data-toggle="modal" data-target="#miniCart">My Cart</a>
-            <router-link to="/admin"><a id="the-profile" class="btn btn-outline-danger my-2 my-sm-0 mt-3 ml-2" >Profili</a></router-link>
+            <router-link to="/admin"><a id="the-profile" class="btn btn-outline-danger my-2 my-sm-0 mt-3 ml-2">Profile</a></router-link>
             </form>
         </div>
 	</nav>
@@ -35,8 +35,22 @@ import {fb} from '../firebase';
 export default {
   name: "Navbar",
   props: {
-    msg: String
+	msg: String,
   },
+methods:{
+	isLogged(){
+		fb.auth().onAuthStateChanged((user) => {
+			if (user) {
+				console.log("whatt2")
+				// this.isLoggedin = true;
+			} else {
+				console.log("whatt")
+				// this.isLoggedin = false;
+			}
+		});
+	}
+},
+
 };
 </script>
 

@@ -19,7 +19,7 @@ export default {
   name: "home",
   components: {
     Main,Login,ProductList
-  }
+  },
 };
 </script>
 
